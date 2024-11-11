@@ -7,11 +7,7 @@ body {
 #configuration {
   background: #dbe2e9;
   color: #333;
-  position: fixed;
-  top: 0;
-  right: -520px;
-  width: 500px;
-  height: 100%;
+  display: none;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;

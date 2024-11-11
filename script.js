@@ -1,11 +1,15 @@
 function toggleConfigurationPanel() {
-    const element = document.getElementById("configuration");
-    element.classList.toggle("on");
+    const panel = document.getElementById("configuration");
+    //panel.classList.toggle("on");
+    panel.style.display = 'block';
 }
 
 function changeFont() {
-    var fonts = document.getElementById("fontList");
-    document.getElementById("home").style.fontFamily = fonts.options[mylist.selectedIndex].text;
+    const fonts = document.getElementById("fontList");
+    var selectedFont = fonts.options[fonts.selectedIndex].text;
+
+    document.getElementById("home").style.fontFamily = selectedFont
+    document.getElementById("fontList").style.fontFamily = selectedFont
 }
 
 

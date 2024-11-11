@@ -12,7 +12,7 @@
 
 <body>
 
-<div id="home" >
+<div id="home">
     <button onclick="toggleConfigurationPanel()">Open Configuration</button>
 
     <div id="title"></div>
@@ -24,30 +24,27 @@
 
 
 <div id="configuration">
-    <b> Font: </b>
-    <select id="fontList" onchange="changeFont()">
-        <option> ---Choose ---</option>
-        <option>Helvetica</option>
-        <option>Roboto</option>
-        <option>Geist</option>
-        <option>Satoshi</option>
-        <option>Open Sans</option>
-        <option>Nunito</option>
-        <option>Lato</option>
-        <option>Beanco</option>
-    </select>
+    <form>
+        <label>Font</label>
+        <select id="fontList" class="dropdown" onchange="changeFont()">
+            <option>Helvetica</option>
+            <option>Futura</option>
+            <option>Andale Mono</option>
+            <option>Geneva</option>
+            <option>Courier New</option>
+            <option>Tahoma</option>
+            <option>Impact</option>
+            <option>Arial</option>
+            <option>Arial Black</option>
+            <option>Arial Rounded MT Bold</option>
+            <option>Open Sans</option>
+            <option>Georgia</option>
+            <option>Rockwell</option>
+        </select>
+        
+        <input type="submit" value="Submit" onclick="saveOptions()"/>
 
-    <table>
-        <tr>
-            <td>Option1</td>
-            <td><input type="text" id="setOption1"></td>
-        </tr>
-        <tr>
-            <td>Option2</td>
-            <td><input type="text" id="setOption2"></td>
-        </tr>
-    </table>
-    <button onclick="saveOptions()">Save</button>
+    </form>
 </div>
 
 </body>
