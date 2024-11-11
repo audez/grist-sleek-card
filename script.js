@@ -1,4 +1,5 @@
-$('button').click(function(){
+
+$("button").click(function(){
   $('#slideout').toggleClass('on');
 });
 

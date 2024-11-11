@@ -5,36 +5,35 @@
     <title>Grist Basic Example</title>
 
     <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-<button type="button" class="btn btn-default">Toggle</button>
 
-<div id="home" class="panel">
-    <div id="title"></div>
-    <div id="subtitle"></div>
-    <img id="image" src=""/>
-    <div class="text" id="text1"></div>
-    <div class="text" id="text2"></div>
-</div>
+    <div id="home" class="panel">
+        <div id="title"></div>
+        <div id="subtitle"></div>
+        <img id="image" src=""/>
+        <div class="text" id="text1"></div>
+        <div class="text" id="text2"></div>
+    </div>
+    
 
-
-<div id="configuration" class="panel">
-    <table>
-        <tr>
-            <td>Option1</td>
-            <td><input type="text" id="setOption1"></td>
-        </tr>
-        <tr>
-            <td>Option2</td>
-            <td><input type="text" id="setOption2"></td>
-        </tr>
-    </table>
-    <button onclick="saveOptions()">Save</input> </button>
-</div>
+    <div id="configuration" class="panel">
+        <table>
+            <tr>
+                <td>Option1</td>
+                <td><input type="text" id="setOption1"></td>
+            </tr>
+            <tr>
+                <td>Option2</td>
+                <td><input type="text" id="setOption2"></td>
+            </tr>
+        </table>
+        <button onclick="saveOptions()">Save</input> </button>
+    </div>
 
 </body>
 </html>
