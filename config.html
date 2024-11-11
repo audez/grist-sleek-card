@@ -15,19 +15,45 @@
         <div>Option1: <span id="getOption1">-</span></div>
         <div>Option2: <span id="getOption2">-</span></div>
     </div>
-    
-    <div id="configuration" style="display: none;">
-        <table>
-            <tr>
-                <td>Option1</td>
-                <td><input type="text" id="setOption1"></td>
-            </tr>
-            <tr>
-                <td>Option2</td>
-                <td><input type="text" id="setOption2"></td>
-            </tr>
-        </table>
-        <button onclick="saveOptions()">Save</input>
+
+
+    <div id="configuration">
+
+        <label>Font</label>
+        <select id="fontList" class="dropdown" onchange="changeFont()">
+            <option>Helvetica</option>
+            <option>Geneva</option>
+            <option>Futura</option>
+            <option>Helvetica</option>
+            <option>Courier New</option>
+            <option>Andale Mono</option>
+            <option>Tahoma</option>
+            <option>Impact</option>
+            <option>Arial</option>
+            <option>Arial Black</option>
+            <option>Arial Rounded MT Bold</option>
+            <option>Open Sans</option>
+            <option>Georgia</option>
+            <option>Rockwell</option>
+        </select>
+
+        <label>Background color</label>
+        <div id="colors">
+            <input type="radio" name="color" id="grey" value="grey" />
+            <label for="grey"><span class="grey"></span></label>
+
+            <input type="radio" name="color" id="green" />
+            <label for="green"><span class="green"></span></label>
+
+            <input type="radio" name="color" id="blue" />
+            <label for="blue"><span class="blue"></span></label>
+
+            <input type="radio" name="color" id="pink" />
+            <label for="pink"><span class="pink"></span></label>
+        </div>
+
+        <input type="submit" value="Submit" onclick="saveOptions()"/>
+
     </div>
     
 </div>
