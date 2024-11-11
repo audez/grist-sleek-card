@@ -12,30 +12,43 @@
 
 <body>
 
-    <div id="home" class="panel">
-        <button onclick="toggleConfigurationPanel()">Open Configuration </button>
-        
-        <div id="title"></div>
-        <div id="subtitle"></div>
-        <img id="image" src=""/>
-        <div class="text" id="text1"></div>
-        <div class="text" id="text2"></div>
-    </div>
-    
+<div id="home" >
+    <button onclick="toggleConfigurationPanel()">Open Configuration</button>
 
-    <div id="configuration" class="panel">
-        <table>
-            <tr>
-                <td>Option1</td>
-                <td><input type="text" id="setOption1"></td>
-            </tr>
-            <tr>
-                <td>Option2</td>
-                <td><input type="text" id="setOption2"></td>
-            </tr>
-        </table>
-        <button onclick="saveOptions()">Save </button>
-    </div>
+    <div id="title"></div>
+    <div id="subtitle"></div>
+    <img id="image" src=""/>
+    <div class="text" id="text1"></div>
+    <div class="text" id="text2"></div>
+</div>
+
+
+<div id="configuration">
+    <b> Font: </b>
+    <select id="fontList" onchange="changeFont()">
+        <option> ---Choose ---</option>
+        <option>Helvetica</option>
+        <option>Roboto</option>
+        <option>Geist</option>
+        <option>Satoshi</option>
+        <option>Open Sans</option>
+        <option>Nunito</option>
+        <option>Lato</option>
+        <option>Beanco</option>
+    </select>
+
+    <table>
+        <tr>
+            <td>Option1</td>
+            <td><input type="text" id="setOption1"></td>
+        </tr>
+        <tr>
+            <td>Option2</td>
+            <td><input type="text" id="setOption2"></td>
+        </tr>
+    </table>
+    <button onclick="saveOptions()">Save</button>
+</div>
 
 </body>
 </html>

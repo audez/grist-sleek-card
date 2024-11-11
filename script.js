@@ -3,6 +3,13 @@ function toggleConfigurationPanel() {
     element.classList.toggle("on");
 }
 
+function changeFont() {
+    var fonts = document.getElementById("fontList");
+    document.getElementById("home").style.fontFamily = fonts.options[mylist.selectedIndex].text;
+}
+
+
+
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
 const htmlReferences = ['title', 'subtitle', 'image', 'text1', 'text2']
 
