@@ -1,3 +1,7 @@
+$('button').click(function(){
+  $('#slideout').toggleClass('on');
+});
+
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
 const htmlReferences = ['title', 'subtitle', 'image', 'text1', 'text2']
   
