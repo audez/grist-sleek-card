@@ -1,6 +1,7 @@
 
 function toggleConfigurationPanel() {
-    $('#slideout').toggleClass('on');
+  const element = document.getElementById("slideout");
+  element.classList.toggle("on");
 }
 function initGrist() {
   const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']

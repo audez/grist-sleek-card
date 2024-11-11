@@ -18,7 +18,7 @@ body {
   transition-duration: 0.3s;
 }
 
-#slideout.on {
+#configuration.on {
   right: 0;
 }
 
