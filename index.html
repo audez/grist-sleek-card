@@ -5,14 +5,16 @@
     <title>Grist Basic Example</title>
 
     <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
-    <script src="jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
     <div id="home" class="panel">
+        <button onclick="toggleConfigurationPanel()">Open Configuration </button>
+        
         <div id="title"></div>
         <div id="subtitle"></div>
         <img id="image" src=""/>
@@ -32,7 +34,7 @@
                 <td><input type="text" id="setOption2"></td>
             </tr>
         </table>
-        <button onclick="saveOptions()">Save</input> </button>
+        <button onclick="saveOptions()">Save </button>
     </div>
 
 </body>
