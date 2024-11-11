@@ -4,7 +4,7 @@ const htmlReferences = ['title', 'subtitle', 'image', 'text1', 'text2']
 grist.ready({columns: columnsToMap, requiredAccess: 'read table'});
 
 grist.onRecord(async (record, mappings) => {
-  console.log("record = " + JSON.stringify(mapped))
+  console.log("record = " + JSON.stringify(record))
 
   
   const mapped = grist.mapColumnNames(record);
