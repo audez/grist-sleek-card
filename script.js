@@ -1,8 +1,4 @@
 
-$("button").click(function(){
-  $('#slideout').toggleClass('on');
-});
-
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
 const htmlReferences = ['title', 'subtitle', 'image', 'text1', 'text2']
   
@@ -32,4 +28,9 @@ grist.onRecord(async (record, mappings) => {
     // Not all required columns were mapped.
     console.error("Please map at least one column");
   }
+});
+
+
+$("button").click(function(){
+  $('#slideout').toggleClass('on');
 });
