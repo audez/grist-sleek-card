@@ -1,5 +1,3 @@
-
-
 function openTab(tabName) {
     var i, tabcontent, tablinks;
 
@@ -27,8 +25,26 @@ function changeFont() {
 
     document.getElementById("home").style.fontFamily = selectedFont
     document.getElementById("fontList").style.fontFamily = selectedFont
+
 }
 
+
+function changeBackground() {
+    const colors = document.getElementById("colorList");
+    const selectedColor = colors.options[colors.selectedIndex].text;
+
+    let bg;
+    if (selectedColor === "Blue")
+        bg = "#DFEBF0"
+    else if (selectedColor === "Green")
+        bg = "#E0ECEA"
+    else if (selectedColor === "Pink")
+        bg = "#E9E4F1"
+    else if (selectedColor === "Grey") bg = "#EBECED"
+    else bg = "#000"
+
+    document.getElementById("home").style.background = bg;
+}
 
 
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
@@ -65,8 +81,6 @@ grist.onRecord(async (record, mappings) => {
 });
 
 
-
-
 function changeFont() {
     const fonts = document.getElementById("fontList");
     var selectedFont = fonts.options[fonts.selectedIndex].text;
@@ -74,7 +88,6 @@ function changeFont() {
     document.getElementById("home").style.fontFamily = selectedFont
     document.getElementById("fontList").style.fontFamily = selectedFont
 }
-
 
 
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
@@ -90,12 +103,11 @@ grist.onRecord(async (record, mappings) => {
     homeTab.classList.add("active");
 
 
-
     console.log("record = " + JSON.stringify(record))
 
 
-   // const mapped = grist.mapColumnNames(record);
-   // console.log("mapped = " + JSON.stringify(mapped))
+    // const mapped = grist.mapColumnNames(record);
+    // console.log("mapped = " + JSON.stringify(mapped))
 
     // First check if all columns were mapped by user
     if (Object.keys(mapped).length !== 0) {

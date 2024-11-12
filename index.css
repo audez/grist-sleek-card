@@ -34,7 +34,7 @@
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 40px 12px;
+  padding: 20px 12px;
   border: 1px solid #ccc;
   border-top: none;
 }
@@ -70,13 +70,21 @@ img {
   font-size: small;
 }
 
-#fontList {
-  margin-bottom:20px;
-}
+
 #colors {
   margin-bottom:20px;
 }
 
+.formLabel {
+  margin-bottom: 5px;
+}
+.formSelect {
+  margin-bottom: 15px;
+}
+#closeButton {
+  margin-top: 15px;
+  padding-bottom: 5px;
+}
 
 
 

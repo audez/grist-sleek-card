@@ -29,8 +29,9 @@
 
 <div id="settings" class="tabcontent">
     <form>
-        <label>Font</label>
-        <select id="fontList" class="dropdown" onchange="changeFont()">
+        <div class="formLabel">
+            <label>Font</label></div>
+        <div class="formSelect"> <select id="fontList" class="dropdown" onchange="changeFont()">
             <option>Helvetica</option>
             <option>Futura</option>
             <option>Andale Mono</option>
@@ -44,9 +45,20 @@
             <option>Open Sans</option>
             <option>Georgia</option>
             <option>Rockwell</option>
-        </select>
+        </select></div>
 
-        <input type="submit" value="Submit" onclick="saveOptions()"/>
+
+        <div class="formLabel">
+            <label>Background color</label></div>
+        <div class="formSelect">  <select id="colorList" class="dropdown" onchange="changeBackground()">
+            <option>None</option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Pink</option>
+            <option>Grey</option>
+        </select></div>
+
+        <input id="closeButton" type="submit" value="Close configuration" onclick="saveOptions()"/>
 
     </form>
 </div>
