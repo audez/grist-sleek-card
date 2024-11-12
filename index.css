@@ -39,6 +39,10 @@
   border-top: none;
 }
 
+#home {
+  display:block;
+}
+
 #configuration {
   padding: 20px;
   border-radius: 25px;

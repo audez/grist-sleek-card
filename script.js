@@ -1,10 +1,3 @@
-const homeTab = document.getElementById("home")
-homeTab.style.display = "block";
-homeTab.classList.add("active");
-
-
-
-
 function openTab(tabName) {
     var i, tabcontent, tablinks;
 
@@ -58,8 +51,7 @@ const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
 const htmlReferences = ['title', 'subtitle', 'image', 'text1', 'text2']
 
 //columns: columnsToMap, 
-grist.ready(
-    {requiredAccess: 'read table'});
+grist.ready({requiredAccess: 'read table'});
 
 grist.onRecord(async (record, mappings) => {
     console.log("record = " + JSON.stringify(record))
