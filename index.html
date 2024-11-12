@@ -12,7 +12,24 @@
 
 <body>
 
-<div id="configuration">
+<div class="tab">
+    <button class="tablinks" onclick="openTab('home')">Home</button>
+    <button class="tablinks" onclick="openTab('settings')">⚙️</button>
+</div>
+
+
+<div id="home">
+    <button onclick="toggleConfigurationPanel()">Open Configuration</button>
+
+    <div id="title"></div>
+    <div id="subtitle"></div>
+    <img id="image" src=""/>
+    <div class="text" id="text1"></div>
+    <div class="text" id="text2"></div>
+</div>
+
+
+<div id="settings" class="tabcontent">
     <form>
         <label>Font</label>
         <select id="fontList" class="dropdown" onchange="changeFont()">
@@ -30,21 +47,15 @@
             <option>Georgia</option>
             <option>Rockwell</option>
         </select>
-        
+
         <input type="submit" value="Submit" onclick="saveOptions()"/>
 
     </form>
 </div>
 
-<div id="home">
-    <button onclick="toggleConfigurationPanel()">Open Configuration</button>
 
-    <div id="title"></div>
-    <div id="subtitle"></div>
-    <img id="image" src=""/>
-    <div class="text" id="text1"></div>
-    <div class="text" id="text2"></div>
-</div>
+
+
 
 
 </body>

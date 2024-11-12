@@ -1,7 +1,21 @@
-function toggleConfigurationPanel() {
-    const panel = document.getElementById("configuration");
-    //panel.classList.toggle("on");
-    panel.style.display = 'block';
+function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 
 function changeFont() {
@@ -28,22 +42,22 @@ grist.onRecord(async (record, mappings) => {
    // console.log("mapped = " + JSON.stringify(mapped))
 
     // First check if all columns were mapped by user
-/* if (Object.keys(mapped).length !== 0) {
-     // Map columns and html elements  
-     columnsToMap.forEach(function (item, index) {
-         document.getElementById(htmlReferences[index]).innerText = mapped[item];
-     });
+    if (Object.keys(mapped).length !== 0) {
+        // Map columns and html elements  
+        columnsToMap.forEach(function (item, index) {
+            document.getElementById(htmlReferences[index]).innerText = mapped[item];
+        });
 
-     //getting img 
-     const tokenInfo = await grist.docApi.getAccessToken({readOnly: true});
-     const id = mapped.Image[0];  // only get the first attachment (there could be several)
-     const src = `${tokenInfo.baseUrl}/attachments/${id}/download?auth=${tokenInfo.token}`;
-     document.getElementById('image').setAttribute('src', src);
+        //getting img 
+        const tokenInfo = await grist.docApi.getAccessToken({readOnly: true});
+        const id = mapped.Image[0];  // only get the first attachment (there could be several)
+        const src = `${tokenInfo.baseUrl}/attachments/${id}/download?auth=${tokenInfo.token}`;
+        document.getElementById('image').setAttribute('src', src);
 
- } else {
-     // Not all required columns were mapped.
-     console.error("Please map at least one column");
- }*/
+    } else {
+        // Not all required columns were mapped.
+        console.error("Please map at least one column");
+    }
 });
 
 
