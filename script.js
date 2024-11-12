@@ -1,3 +1,4 @@
+
 function openTab(tabName) {
     var i, tabcontent, tablinks;
 
@@ -10,13 +11,12 @@ function openTab(tabName) {
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace("active", "");
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     selectedTab = document.getElementById(tabName)
     selectedTab.style.display = "block";
-    element.classList.add("active");
 }
 
 function changeFont() {
