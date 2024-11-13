@@ -8,7 +8,7 @@ body {
 #tab {
   display: none;
   overflow: hidden;
-  border: 1px solid #ccc;
+  padding: 5px 12px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -34,9 +34,7 @@ body {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 20px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  padding: 5px 12px;
 }
 
 #home {

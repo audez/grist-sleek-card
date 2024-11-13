@@ -13,7 +13,7 @@
 <body>
 
 <div id="tab">
-    <button class="tablinks" onclick="openTab('home')">Home</button>
+    <button class="tablinks" onclick="openTab('home')">Preview</button>
     <button class="tablinks" onclick="openTab('settings')">Settings</button>
 </div>
 
@@ -59,15 +59,33 @@
 
         <div class="groups">
             <label>Group fields</label>
-            <input id="addGroup" type="submit" value="Add new group" onclick="addNewGroup()"/>
             <div class="group">
-                <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"/>
+                <label>Group name</label>
+                <div><input type="text" id="name" name="name"/></div>
+                <div id="selectGroupFields">
+                    <select id="multipleSelect" multiple="multiple">
+                        <option value="1">Text 1</option>
+                        <option value="2">Text 2</option>
+                        <option value="3">Text 3</option>
+                        <option value="3">Text 3</option>
+                        <option value="3">Text 3</option>
+                        <option value="3">Text 3</option>
+                        <option value="3">Text 3</option>
+                        <option value="3">Text 3</option>
+                    </select>
+                    <input id="saveGroupFieldsButton" type="submit" value="Save" onclick="saveGroupFields()"/>
+                </div>
             </div>
+            <div>
+                <input id="addGroup" type="submit" value="Add new group" onclick="addNewGroup()"/>
+            </div>
+
         </div>
+</div>
 
-        <input id="closeButton" type="submit" value="Close configuration" onclick="saveOptions()"/>
+<input id="closeButton" type="submit" value="Save configuration" onclick="saveOptions()"/>
 
-    </form>
+</form>
 </div>
 
 

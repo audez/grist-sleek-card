@@ -22,8 +22,15 @@ function changeFont() {
     const fonts = document.getElementById("fontList");
     const selectedFont = fonts.options[fonts.selectedIndex].text;
 
-    //document.getElementById("home").style.fontFamily = selectedFont;    
+    document.getElementById("home").style.fontFamily = selectedFont;    
     document.getElementById("fontList").style.fontFamily = selectedFont;
+}
+
+function setFont(fontName) {
+    document.getElementById("fontList").value = fontName;
+
+    document.getElementById("home").style.fontFamily = fontName;    
+    document.getElementById("fontList").style.fontFamily = fontName;
 }
 
 function changeBackground() {
@@ -44,8 +51,16 @@ function changeBackground() {
     return bg;
 }
 
+function setBackground(color) {
+    document.getElementById("colorList").value = color;
+    document.getElementById("home").style.background = color;
+}
+
 function addNewGroup() {
-    
+    var myDiv = document.getElementById("test");
+
+    var divClone = myDiv.cloneNode(true);
+    document.body.appendChild(divClone);
 }
 
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
@@ -61,6 +76,17 @@ grist.ready({
     // Inform about required access level.
     requiredAccess: 'read table'
 });
+
+grist.onOptions(function(options, interaction) {
+    if (options) {
+        setFont(options.font)
+        
+        console.log('Current color', options.backgroundColor);
+    } else {
+        // No widget options were saved, fallback to default ones.
+    }
+});
+
 
 grist.onRecord(async (record, mappings) => {
     console.log("record = " + JSON.stringify(record))
@@ -88,14 +114,6 @@ grist.onRecord(async (record, mappings) => {
 });
 
 
-grist.onOptions(function(options, interaction) {
-    if (options) {
-        console.log('Font = ', options.font);
-        console.log('Current color', options.backgroundColor);
-    } else {
-        // No widget options were saved, fallback to default ones.
-    }
-});
 
 // Define handler for the Save button.
 async function saveOptions() {
