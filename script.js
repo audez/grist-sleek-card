@@ -41,13 +41,25 @@ function changeBackground() {
     else bg = "#fff"
 
     document.getElementById("home").style.background = bg;
+    return bg;
+}
+
+function addNewGroup() {
+    
 }
 
 
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
 const htmlReferences = ['title', 'subtitle', 'image', 'text1', 'text2']
 
-grist.ready({columns: columnsToMap, requiredAccess: 'read table'});
+grist.ready({
+    // Register configuration handler to show configuration panel.
+    onEditOptions() {
+        document.getElementById("tab").style.display = 'block';
+    },
+    // Inform about required access level.
+    requiredAccess: 'read table'
+});
 
 grist.onRecord(async (record, mappings) => {
     console.log("record = " + JSON.stringify(record))
@@ -75,3 +87,25 @@ grist.onRecord(async (record, mappings) => {
     }
 });
 
+
+grist.onOptions(function(options, interaction) {
+    if (options) {
+        console.log('Font = ', options.font);
+        console.log('Current color', options.backgroundColor);
+    } else {
+        // No widget options were saved, fallback to default ones.
+    }
+});
+
+// Define handler for the Save button.
+async function saveOptions() {
+    const fonts = document.getElementById("fontList");
+    const selectedFont = fonts.options[fonts.selectedIndex].text;
+    await grist.widgetApi.setOption('font', selectedFont);
+    
+    const bgColor = changeBackground()
+    await grist.widgetApi.setOption('backgroundColor', bgColor);
+    // There is no need to update visible options, as Grist will send us a new message that will
+    // be handled by the onOptions handler.
+    showPanel('main');
+}

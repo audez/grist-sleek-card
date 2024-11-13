@@ -12,16 +12,16 @@
 
 <body>
 
-<div class="tab">
+<div id="tab">
     <button class="tablinks" onclick="openTab('home')">Home</button>
     <button class="tablinks" onclick="openTab('settings')">Settings</button>
 </div>
 
 
 <div id="home" class="tabcontent">
-    <div class="item" id="title"></div>
+    <div id="title"></div>
     <div class="item" id="subtitle"></div>
-    <img  id="image" class="item" src=""/>
+    <img id="image" class="item" src=""/>
     <div class="item text" id="text1"></div>
     <div class="item text" id="text2"></div>
 </div>
@@ -31,7 +31,7 @@
     <form>
         <div class="formLabel">
             <label>Font</label></div>
-        <div class="formSelect"> <select id="fontList" class="dropdown" onchange="changeFont()">
+        <div class="formSelect"><select id="fontList" class="dropdown" onchange="changeFont()">
             <option>Helvetica</option>
             <option>Futura</option>
             <option>Andale Mono</option>
@@ -48,15 +48,22 @@
         </select></div>
 
 
-        <div class="formLabel">
-            <label>Background color</label></div>
-        <div class="formSelect">  <select id="colorList" class="dropdown" onchange="changeBackground()">
+        <div class="formLabel"><label>Background color</label></div>
+        <div class="formSelect"><select id="colorList" class="dropdown" onchange="changeBackground()">
             <option>None</option>
             <option>Blue</option>
             <option>Green</option>
             <option>Violet</option>
             <option>Grey</option>
         </select></div>
+
+        <div class="groups">
+            <label>Group fields</label>
+            <input id="addGroup" type="submit" value="Add new group" onclick="addNewGroup()"/>
+            <div class="group">
+                <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"/>
+            </div>
+        </div>
 
         <input id="closeButton" type="submit" value="Close configuration" onclick="saveOptions()"/>
 

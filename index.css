@@ -5,8 +5,8 @@ body {
 
 
 /* Style the tab */
-.tab {
-  /* display: none;*/
+#tab {
+  display: none;
   overflow: hidden;
   border: 1px solid #ccc;
 }
@@ -66,9 +66,12 @@ img {
 
 #title {
   font-size: large;
+  font-weight: bold;
+
 }
 #subtitle {
   font-size: medium;
+  padding-bottom: 10px;
 }
 .item {
   padding-bottom: 10px;
