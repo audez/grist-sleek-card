@@ -57,11 +57,28 @@ function setBackground(color) {
 }
 
 function addNewGroup() {
-   
+    let i = 0;
+    const original = document.getElementById("group");
+    const clone = original.cloneNode(true);
+    clone.id = "group" + ++i;
+    original.parentNode.appendChild(clone);
+
 }
 
 function saveGroupFields() {
-  
+    var options = document.getElementById('multipleSelect').options,
+        result = [];
+
+    for (var i = 0, len = options.length; i < len; i++) {
+        var opt = options[i];
+
+        if (opt.selected) {
+            result.push(opt.value);
+        }
+    }
+
+    alert(result);
+    console.log("saveGroupFields")
 }
 
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
