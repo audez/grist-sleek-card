@@ -57,10 +57,11 @@ function setBackground(color) {
 }
 
 function addNewGroup() {
-    var myDiv = document.getElementById("test");
-
-    var divClone = myDiv.cloneNode(true);
-    document.body.appendChild(divClone);
+    var i = 0;
+    var original = document.getElementById('test');
+    var clone = original.cloneNode(true);
+    clone.id = "test" + ++i;
+    original.parentNode.appendChild(clone);
 }
 
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
