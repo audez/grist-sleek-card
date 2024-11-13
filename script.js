@@ -48,11 +48,12 @@ function addNewGroup() {
     
 }
 
-
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
 const htmlReferences = ['title', 'subtitle', 'image', 'text1', 'text2']
 
+
 grist.ready({
+    columns: columnsToMap,
     // Register configuration handler to show configuration panel.
     onEditOptions() {
         document.getElementById("tab").style.display = 'block';
@@ -63,7 +64,6 @@ grist.ready({
 
 grist.onRecord(async (record, mappings) => {
     console.log("record = " + JSON.stringify(record))
-
 
     const mapped = grist.mapColumnNames(record);
     console.log("mapped = " + JSON.stringify(mapped))
