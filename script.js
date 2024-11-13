@@ -57,10 +57,10 @@ function setBackground(color) {
 }
 
 function addNewGroup() {
-    var i = 0;
-    var original = document.getElementById('test');
-    var clone = original.cloneNode(true);
-    clone.id = "test" + ++i;
+    let i = 0;
+    const original = document.getElementById("group");
+    const clone = original.cloneNode(true);
+    clone.id = "group" + ++i;
     original.parentNode.appendChild(clone);
 }
 

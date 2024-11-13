@@ -30,38 +30,41 @@
 <div id="settings" class="tabcontent">
     <form>
         <div class="formLabel">
-            <label>Font</label></div>
-        <div class="formSelect"><select id="fontList" class="dropdown" onchange="changeFont()">
-            <option>Helvetica</option>
-            <option>Futura</option>
-            <option>Andale Mono</option>
-            <option>Geneva</option>
-            <option>Courier New</option>
-            <option>Tahoma</option>
-            <option>Impact</option>
-            <option>Arial</option>
-            <option>Arial Black</option>
-            <option>Arial Rounded MT Bold</option>
-            <option>Open Sans</option>
-            <option>Georgia</option>
-            <option>Rockwell</option>
-        </select></div>
+            Font</label>
+            <select id="fontList" class="dropdown" onchange="changeFont()">
+                <option>Helvetica</option>
+                <option>Futura</option>
+                <option>Andale Mono</option>
+                <option>Geneva</option>
+                <option>Courier New</option>
+                <option>Tahoma</option>
+                <option>Impact</option>
+                <option>Arial</option>
+                <option>Arial Black</option>
+                <option>Arial Rounded MT Bold</option>
+                <option>Open Sans</option>
+                <option>Georgia</option>
+                <option>Rockwell</option>
+            </select>
 
 
-        <div class="formLabel"><label>Background color</label></div>
-        <div class="formSelect"><select id="colorList" class="dropdown" onchange="changeBackground()">
-            <option>None</option>
-            <option>Blue</option>
-            <option>Green</option>
-            <option>Violet</option>
-            <option>Grey</option>
-        </select></div>
+            <div class="formLabel"><label>Background color</label></div>
+            <select id="colorList" class="dropdown" onchange="changeBackground()">
+                <option>None</option>
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Violet</option>
+                <option>Grey</option>
+            </select></div>
 
         <div class="groups">
             <label>Group fields</label>
             <div id="group">
-                <label>Group name</label>
-                <div><input type="text" id="name" name="name"/></div>
+                <div>
+                    <label>Group name</label>
+                    <input type="text" id="name" name="name"/>
+                </div>
+                <label>Select fields</label>
                 <div id="selectGroupFields">
                     <select id="multipleSelect" multiple="multiple">
                         <option value="1">Text 1</option>
@@ -77,13 +80,13 @@
                 </div>
             </div>
             <div>
-                <input id="addGroup" type="submit" value="Add new group" onclick="addNewGroup()"/>
+                <input id="addGroup" type="submit" value="Add another group" onclick="addNewGroup()"/>
             </div>
 
         </div>
+    </form>
+    <input id="closeButton" type="submit" value="Save configuration" onclick="saveOptions()"/>
 </div>
-
-<input id="closeButton" type="submit" value="Save configuration" onclick="saveOptions()"/>
 
 </form>
 </div>
