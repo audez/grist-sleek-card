@@ -57,11 +57,11 @@ function setBackground(color) {
 }
 
 function addNewGroup() {
-    let i = 0;
-    const original = document.getElementById("group");
-    const clone = original.cloneNode(true);
-    clone.id = "group" + ++i;
-    original.parentNode.appendChild(clone);
+   
+}
+
+function saveGroupFields() {
+  
 }
 
 const columnsToMap = ['Title', 'Subtitle', 'Image', 'Text1', 'Text2']
