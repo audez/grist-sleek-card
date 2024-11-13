@@ -70,6 +70,9 @@ img {
 #subtitle {
   font-size: medium;
 }
+.item {
+  padding-bottom: 10px;
+}
 .text {
   font-size: small;
 }

@@ -22,9 +22,8 @@ function changeFont() {
     const fonts = document.getElementById("fontList");
     const selectedFont = fonts.options[fonts.selectedIndex].text;
 
-    //document.getElementById("home").style.fontFamily = selectedFont
-    document.getElementById("home").setAttribute('style', 'font-family:' + selectedFont + '!important');
-    document.getElementById("fontList").style.fontFamily = selectedFont
+    document.getElementById("home").style.fontFamily = selectedFont;    
+    document.getElementById("fontList").style.fontFamily = selectedFont;
 }
 
 function changeBackground() {
